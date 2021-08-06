@@ -1,0 +1,23 @@
+{
+  "name": "minecraft-server-manager",
+  "version": "0.0.1-alpha",
+  "description": "A Minecraft Server Manager for Linux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelcmace/minecraft-server-manager.git"
+  },
+  "author": "Samuel Mace",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuelcmace/minecraft-server-manager/issues"
+  },
+  "homepage": "https://github.com/samuelcmace/minecraft-server-manager#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^8.0.0"
+  }
+}
