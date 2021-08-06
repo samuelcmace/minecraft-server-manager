@@ -1,0 +1,54 @@
+body {
+  font-family: arial;
+  background-color: green;
+}
+
+.main-container {
+  background-color: gray;
+  height: 100vh;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8rem;
+  margin-left: -16rem;
+  width: 32rem;
+  height: : 16rem;
+}
+
+#title-label {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.login-fields {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+  grid-auto-rows: auto;
+}
+
+#username-label {
+font-weight: bold;
+
+}
+
+#username-input {
+
+}
+
+#password-label {
+font-weight: bold;
+
+}
+
+#password-input {
+
+}
+
+#submit-button {
+  width: 100%;
+  margin-top: 1rem;
+}

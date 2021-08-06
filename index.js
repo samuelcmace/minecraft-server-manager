@@ -1,5 +1,6 @@
 const https = require("https");
 const fs = require("fs");
+const path = require("path");
 const child_process = require("child_process");
 
 const express = require("express");
@@ -67,24 +68,38 @@ server_process.on('SIGTERM', function () {
 
 // Create Web Manager
 
-const index = fs.readFileSync("src/index.html");
 const hostname = "127.0.0.1";
 const web_port = 3000;
 
 const app = express();
 app.use(express.urlencoded({ extended:true }));
 
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/src/index.html");
+app.use("/include/", express.static(path.join(__dirname, "src/include/")));
+app.use("/css/", express.static(path.join(__dirname, "src/css/")));
+
+app.get("/console.html", function(req, res) {
+  res.sendFile(path.join(__dirname, "src/console.html"));
 });
 
-app.post("/", function(req, res) {
+app.get("/login.html", function(req, res) {
+  res.sendFile(path.join(__dirname, "src/login.html"));
+});
+
+app.post("/console.html", function(req, res) {
   var command = String(req.body.text);
 
   console.log("Web Interface Posted This Command: " + command);
   server_process.stdin.write(command + "\n");
 });
 
+app.post("/login.html", function(req, res) {
+  var username = String(req.body.username);
+  var password = String(req.body.password);
+
+  console.log("Username: " + username);
+  console.log("Password: " + password);
+});
+
 app.listen(web_port, function() {
-  console.log("server is running on port 3000");
+  console.log("Minecraft Server Manager Web Interface is running on port " + web_port);
 });
