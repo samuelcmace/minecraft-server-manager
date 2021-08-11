@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/samuelcmace/minecraft-server-manager#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "sqlite3": "^4.2.0",
     "ws": "^8.0.0"
   }
 }
