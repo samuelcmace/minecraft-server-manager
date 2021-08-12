@@ -6,8 +6,13 @@
 
   </head>
   <body>
-    <form action="/console.html" method="post">
-      <input type="text" name="text">
+    <form action="/console" method="post" class="command-form">
+      <label>Java Command:</label>
+      <input type="text" name="java_command">
+
+      <label>Bedrock Command:</label>
+      <input type="text" name="bedrock_command">
+
       <input type="submit" name="submit">
     </form>
     <script src="/popper.min.js"></script>

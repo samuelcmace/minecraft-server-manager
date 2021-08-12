@@ -1,0 +1,14 @@
+body {
+  font-family: arial;
+  background-color: green;
+}
+
+.command-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -8rem;
+  margin-left: -16rem;
+  width: 32rem;
+  height: : 16rem;
+}
